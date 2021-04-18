@@ -37,9 +37,13 @@ ament_target_dependencies(cpp_node rclcpp)
 add_executable(cpp_publisher src/my_first_publisher.cpp)
 ament_target_dependencies(cpp_publisher rclcpp example_interfaces)
 
+add_executable(cpp_subscriber src/my_first_subscriber.cpp)
+ament_target_dependencies(cpp_subscriber rclcpp example_interfaces)
+
 install(TARGETS 
   cpp_node
   cpp_publisher
+  cpp_subscriber
   DESTINATION lib/${PROJECT_NAME}
 )
 
