@@ -22,7 +22,9 @@ setup(
         'console_scripts': [
             "py_node = my_py_pkg.my_first_node:main",
             "py_publisher = my_py_pkg.my_first_publisher:main",
-            "py_subscriber = my_py_pkg.my_first_subscriber:main"
+            "py_subscriber = my_py_pkg.my_first_subscriber:main",
+            "number_publisher = my_py_pkg.number_publisher:main",
+            "number_counter = my_py_pkg.number_counter:main"
         ],
     },
 )
