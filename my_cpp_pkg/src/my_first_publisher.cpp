@@ -6,7 +6,7 @@ class MyFirstPublisher : public rclcpp::Node
 public:
     MyFirstPublisher() : Node("cpp_publisher"), counter_(0)
     {
-        RCLCPP_INFO(this->get_logger(), "Hello Cpp Node");
+        RCLCPP_INFO(this->get_logger(), "Hello from %s", this->get_name());
 
         publisher = this->create_publisher<example_interfaces::msg::String>("string_messages", 10);
 
@@ -22,7 +22,7 @@ private:
         counter_++;
         RCLCPP_INFO(this->get_logger(), "Hello %d", counter_);
         auto data = example_interfaces::msg::String();
-        data.data = "Hello " + counter_;
+        data.data = std::string("Hello ") + std::to_string(counter_);
         publisher->publish(data);
     }
 
