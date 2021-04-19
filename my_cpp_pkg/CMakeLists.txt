@@ -46,12 +46,20 @@ ament_target_dependencies(number_counter rclcpp example_interfaces)
 add_executable(number_publisher src/number_publisher.cpp)
 ament_target_dependencies(number_publisher rclcpp example_interfaces)
 
+add_executable(add_nums_service src/add_nums_service_server.cpp)
+ament_target_dependencies(add_nums_service rclcpp example_interfaces)
+
+add_executable(add_nums_client src/add_nums_service_client.cpp)
+ament_target_dependencies(add_nums_client rclcpp example_interfaces)
+
 install(TARGETS 
   cpp_node
   cpp_publisher
   cpp_subscriber
   number_counter
   number_publisher
+  add_nums_service
+  add_nums_client
   DESTINATION lib/${PROJECT_NAME}
 )
 
