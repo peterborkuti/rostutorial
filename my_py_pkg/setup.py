@@ -24,7 +24,10 @@ setup(
             "py_publisher = my_py_pkg.my_first_publisher:main",
             "py_subscriber = my_py_pkg.my_first_subscriber:main",
             "number_publisher = my_py_pkg.number_publisher:main",
-            "number_counter = my_py_pkg.number_counter:main"
+            "number_counter = my_py_pkg.number_counter:main",
+            "add_nums_server = my_py_pkg.add_nums_service_server:main",
+            "add_nums_service_client_oop = my_py_pkg.add_nums_service_client_oop:main",
+            "add_nums_service_client_noop = my_py_pkg.add_nums_service_client_noop:main",
         ],
     },
 )
